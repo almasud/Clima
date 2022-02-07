@@ -50,15 +50,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4R-eI-5tE">
-                                <rect key="frame" x="363" y="58" width="40.5" height="31"/>
+                                <rect key="frame" x="363" y="58" width="44.5" height="31"/>
                                 <rect key="contentStretch" x="0.34999999999999998" y="0.0" width="1" height="1"/>
                                 <color key="tintColor" name="weatherColor"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="default"/>
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QtA-fk-M99"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-qz-O31">
+                                <rect key="frame" x="8" y="52" width="44" height="43"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="location.north.circle.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHW-Vc-ak7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,9 +79,12 @@
                             <constraint firstItem="54A-mK-fns" firstAttribute="top" secondItem="EDR-QA-7sv" secondAttribute="bottom" constant="24.5" id="1Nr-Yo-d0c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDR-QA-7sv" secondAttribute="trailing" constant="21" id="208-Ka-Xbt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="54A-mK-fns" secondAttribute="trailing" constant="103" id="3tB-L5-ZFc"/>
+                            <constraint firstItem="0Cs-qz-O31" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="4cJ-3v-2bw"/>
                             <constraint firstItem="EDR-QA-7sv" firstAttribute="leading" secondItem="m4b-RU-Ana" secondAttribute="trailing" constant="-119" id="5bc-nL-4TX"/>
+                            <constraint firstItem="0Cs-qz-O31" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="64H-WZ-t8l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m4b-RU-Ana" secondAttribute="trailing" constant="60" id="LVK-Ki-fFv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kfc-7X-hwr" secondAttribute="trailing" constant="21" id="V4C-r6-ewZ"/>
+                            <constraint firstItem="0Cs-qz-O31" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="VeO-SN-pjP"/>
                             <constraint firstItem="EDR-QA-7sv" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.381643" id="Wdz-27-ksV"/>
                             <constraint firstItem="Kfc-7X-hwr" firstAttribute="top" secondItem="1Bt-8v-BUU" secondAttribute="bottom" constant="-5" id="X4G-Ld-ugL"/>
                             <constraint firstItem="m4b-RU-Ana" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="bdr-lK-ZTk"/>
@@ -80,6 +94,7 @@
                             <constraint firstItem="m4b-RU-Ana" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="hxl-gX-CtI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDR-QA-7sv" secondAttribute="trailing" constant="21" id="i6N-5Q-a0v"/>
                             <constraint firstItem="1Bt-8v-BUU" firstAttribute="centerY" secondItem="54A-mK-fns" secondAttribute="centerY" id="iSv-s2-Dm7"/>
+                            <constraint firstItem="0Cs-qz-O31" firstAttribute="centerY" secondItem="m4b-RU-Ana" secondAttribute="centerY" id="nOH-SG-vBO"/>
                             <constraint firstItem="EDR-QA-7sv" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.146699" id="s81-YE-PYT"/>
                             <constraint firstItem="m4b-RU-Ana" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjL-Oi-N4Y"/>
                             <constraint firstItem="Kfc-7X-hwr" firstAttribute="top" secondItem="1Bt-8v-BUU" secondAttribute="bottom" constant="-7" id="vnr-pG-9hH"/>
@@ -96,12 +111,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304" y="-197"/>
+            <point key="canvasLocation" x="-304.34782608695656" y="-197.54464285714286"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="1377" height="1377"/>
         <image name="cloud.sun" catalog="system" width="128" height="95"/>
+        <image name="location.north.circle.fill" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="weatherColor">
             <color red="0.1080000028014183" green="0.2630000114440918" blue="0.28099998831748962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
